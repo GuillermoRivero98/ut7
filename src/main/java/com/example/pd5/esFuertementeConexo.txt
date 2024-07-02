@@ -1,0 +1,28 @@
+Función esFuertementeConexo(grafo):
+    para cada vértice v en grafo.vertices:
+        si !visitado[v]:
+            dfs(v, visitado)
+            // Verificar si todos los vértices fueron visitados
+            si aún hay vértices no visitados:
+                retornar falso
+    
+    // Revertir el grafo
+    grafo.revertir()
+    reiniciar visitado[]
+    
+    // Realizar DFS desde el último vértice visitado en el primer DFS
+    últimoVisitado = último vértice visitado en el primer DFS
+    dfs(últimoVisitado, visitado)
+    
+    // Verificar si todos los vértices fueron visitados
+    si aún hay vértices no visitados:
+        retornar falso
+    
+    retornar verdadero
+
+Función dfs(v, visitado):
+    visitado[v] = verdadero
+    
+    para cada vértice w adyacente a v:
+        si !visitado[w]:
+            dfs(w, visitado)

@@ -1,0 +1,32 @@
+Función componentesFuertementeConexos(grafo):
+    stack = vacío
+    visitado = arreglo de booleanos de tamaño V, inicializado en falso
+    
+    // Paso 1: Realizar un DFS en el grafo original y apilar los vértices en orden de finalización
+    para cada vértice v en grafo.vertices:
+        si !visitado[v]:
+            dfs(v, visitado, stack)
+    
+    // Paso 2: Revertir el grafo
+    grafo.revertir()
+    
+    // Paso 3: Realizar DFS en el grafo revertido en el orden dado por el stack
+    reiniciar visitado[]
+    componentes = lista vacía
+    
+    mientras stack no esté vacío:
+        v = desapilar stack
+        si !visitado[v]:
+            componente = vacío
+            dfs(v, visitado, componente)
+            agregar componente a componentes
+    
+    retornar componentes
+
+Función dfs(v, visitado, componente):
+    visitado[v] = verdadero
+    agregar v a componente
+    
+    para cada vértice w adyacente a v:
+        si !visitado[w]:
+            dfs(w, visitado, componente)

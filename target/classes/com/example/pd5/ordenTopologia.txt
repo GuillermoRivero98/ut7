@@ -1,0 +1,18 @@
+Función ordenTopologico(grafo):
+    stack = vacío
+    visitado = arreglo de booleanos de tamaño V, inicializado en falso
+    
+    para cada vértice v en grafo.vertices:
+        si !visitado[v]:
+            dfs(v, visitado, stack)
+    
+    retornar stack
+
+Función dfs(v, visitado, stack):
+    visitado[v] = verdadero
+    
+    para cada vértice w adyacente a v:
+        si !visitado[w]:
+            dfs(w, visitado, stack)
+    
+    apilar v en stack

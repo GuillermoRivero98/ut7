@@ -1,0 +1,20 @@
+Función tieneCiclos(grafo):
+    para cada vértice v en grafo.vertices:
+        si !visitado[v]:
+            si dfs(v, visitado, enRecorrido) retorna verdadero:
+                retornar verdadero
+    retornar falso
+
+Función dfs(v, visitado, enRecorrido):
+    visitado[v] = verdadero
+    enRecorrido[v] = verdadero
+    
+    para cada vértice w adyacente a v:
+        si !visitado[w]:
+            si dfs(w, visitado, enRecorrido) retorna verdadero:
+                retornar verdadero
+        sino si enRecorrido[w]:
+            retornar verdadero
+    
+    enRecorrido[v] = falso
+    retornar falso

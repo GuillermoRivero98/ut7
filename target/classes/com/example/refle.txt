@@ -1,0 +1,12 @@
+1.	¿Cuál es el concepto más importante que has aprendido o reforzado en esta Unidad Temática?
+
+El concepto más importante que he aprendido es la clasificación y manejo de grafos dirigidos, 
+incluyendo algoritmos como la búsqueda en profundidad y aplicaciones 
+como la clasificación de arcos , retrocesos, avances y cruzados.
+
+
+2.	¿Cuál es la pregunta más relevante que puedas tener y que creas que no ha sido correctamente respondida, 
+analizada o revisada en esta Unidad Temática?
+
+El cómo optimizar aún más los algoritmos relacionados con grafos dirigidos para mejorar su eficiencia en aplicaciones 
+prácticas de gran escala.
